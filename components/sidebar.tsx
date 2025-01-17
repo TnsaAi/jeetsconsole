@@ -4,6 +4,8 @@ import { X, History, User, Settings, Wallet, TrendingUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 
 interface ChatHistoryEntry {
   date: string;
@@ -74,10 +76,11 @@ export function Sidebar() {
             Account Settings
           </Button>
         </Link>
-        <Button variant="outline" className="w-full justify-start">
+        <ConnectButton />
+        {/* <Button variant="outline" className="w-full justify-start">
           <Wallet className="mr-2 h-4 w-4" />
           Your Wallet
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
